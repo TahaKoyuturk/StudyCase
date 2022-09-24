@@ -23,4 +23,18 @@ public class PlayerController : MonoBehaviour
     {
         
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("GreenArea"))
+        {
+            print("GreenArea");
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Cube"))
+        {
+            print("cube");
+        }
+    }
 }
